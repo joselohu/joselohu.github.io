@@ -6,26 +6,28 @@
   <title>Jose David Lopez Huertas | QA Automation Engineer</title>
   <meta name="description" content="QA Automation Engineer in Guatemala City. End-to-end and API test automation with Playwright and TypeScript, API testing with Postman, and data testing with pytest and PostgreSQL.">
   <meta name="author" content="Jose David Lopez Huertas">
-  <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0c0a09" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#121a23">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Jose David Lopez Huertas | QA Automation Engineer">
   <meta property="og:description" content="End-to-end and API test automation with Playwright and TypeScript. ISTQB certified.">
   <meta property="og:url" content="https://joselohu.github.io/">
+  <meta property="og:image" content="https://joselohu.github.io/assets/img/jose.jpg">
 
   <link rel="canonical" href="https://joselohu.github.io/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
 
-  <!-- Sets the theme before first paint so the page never flashes the wrong colours. -->
+  <!-- Sets the theme before first paint. Dark is the default; a stored choice wins. -->
   <script>
     (function () {
       var stored = null;
       try { stored = localStorage.getItem('theme'); } catch (e) {}
-      var dark = stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
-      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+      document.documentElement.dataset.theme = stored === 'light' ? 'light' : 'dark';
     })();
   </script>
 </head>
@@ -34,28 +36,25 @@
 
   <header class="site-header" id="top">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Jose David Lopez Huertas, back to top">
-        <span class="brand-mark" aria-hidden="true">JL</span>
-        <span class="brand-name">Jose Lopez</span>
-      </a>
+      <a class="brand" href="#top">Jose Lopez</a>
 
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <ul>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch to dark theme">
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch to light theme">
           <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
           <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
         </button>
         <button class="icon-button menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
-          <svg class="icon icon-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon icon-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 12h11M4 17h16"/></svg>
           <svg class="icon icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
         </button>
       </div>
@@ -63,264 +62,257 @@
   </header>
 
   <main id="main">
-    <section class="hero container">
-      <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Open to part-time and freelance QA work</p>
-      <h1>I test software so teams can ship with confidence.</h1>
-      <p class="lead">
-        I'm Jose, a QA Automation Engineer in Guatemala City. I build end-to-end and API test
-        suites with Playwright and TypeScript, and I check the data behind the API as well as
-        the screen in front of it.
-      </p>
-      <div class="hero-actions">
-        <a class="button button-primary" href="#work">See my work</a>
-        <a class="button" href="#contact">Get in touch</a>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hello">Hello<span class="accent">.</span></p>
+          <p class="iam">I'm Jose</p>
+          <h1>QA Automation Engineer</h1>
+          <p class="lead">
+            I build end-to-end and API test suites with Playwright and TypeScript,
+            so teams can ship with confidence.
+          </p>
+          <div class="actions">
+            <a class="button button-primary" href="#contact">Got a project?</a>
+            <a class="button" href="#projects">See my work</a>
+          </div>
+        </div>
+
+        <div class="portrait">
+          <svg class="chevron chevron-left" viewBox="0 0 48 48" aria-hidden="true"><path d="M40 6 8 24l32 18"/></svg>
+          <div class="portrait-ring" aria-hidden="true"></div>
+          <img src="assets/img/jose.jpg" width="400" height="400" alt="Portrait of Jose David Lopez Huertas">
+          <svg class="chevron chevron-right" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 6l32 18L8 42"/></svg>
+        </div>
       </div>
-      <dl class="facts">
-        <div>
-          <dt>Experience</dt>
-          <dd>3+ years in QA</dd>
-        </div>
-        <div>
-          <dt>Certified</dt>
-          <dd>ISTQB CTFL and CTFL-AT</dd>
-        </div>
-        <div>
-          <dt>Based in</dt>
-          <dd>Guatemala City, GMT-6</dd>
-        </div>
-        <div>
-          <dt>Languages</dt>
-          <dd>English and Spanish</dd>
-        </div>
-      </dl>
-    </section>
 
-    <section class="section container" id="work" aria-labelledby="work-title">
-      <header class="section-header">
-        <p class="section-label">01</p>
-        <h2 id="work-title">Selected work</h2>
-        <p class="section-intro">Five open projects. Each one runs from a single command, and the automated ones run in CI on every change.</p>
-      </header>
-
-      <div class="projects">
-        <article class="project reveal">
-          <p class="project-kind">End-to-end automation</p>
-          <h3>Playwright E2E Framework</h3>
-          <p>A regression suite for an online store, covering login, product list, cart and checkout on Chromium, Firefox, WebKit and a mobile viewport.</p>
-          <ul class="project-points">
-            <li>Page objects, shared fixtures and a saved login session</li>
-            <li>Runs fully parallel, with traces recorded on retry</li>
-            <li>HTML report published on every push</li>
-          </ul>
-          <ul class="tags" aria-label="Technologies">
-            <li>Playwright</li><li>TypeScript</li><li>GitHub Actions</li>
-          </ul>
-          <p class="project-links">
-            <a href="https://github.com/joselohu/playwright-e2e-framework">Repository<span class="arrow" aria-hidden="true">&#8599;</span></a>
-            <a href="https://joselohu.github.io/playwright-e2e-framework/">Live report<span class="arrow" aria-hidden="true">&#8599;</span></a>
-          </p>
-        </article>
-
-        <article class="project reveal">
-          <p class="project-kind">API testing</p>
-          <h3>API Test Suite</h3>
-          <p>A booking API tested two ways: Playwright API tests for depth, and a Postman collection run by Newman for a chained booking lifecycle.</p>
-          <ul class="project-points">
-            <li>Every response validated against a JSON Schema</li>
-            <li>Authorization and negative cases that read back the data</li>
-            <li>Six API defects documented as expected failures</li>
-          </ul>
-          <ul class="tags" aria-label="Technologies">
-            <li>Playwright API</li><li>Postman</li><li>Newman</li><li>Ajv</li>
-          </ul>
-          <p class="project-links">
-            <a href="https://github.com/joselohu/api-test-suite">Repository<span class="arrow" aria-hidden="true">&#8599;</span></a>
-          </p>
-        </article>
-
-        <article class="project reveal">
-          <p class="project-kind">Data and geospatial testing</p>
-          <h3>API and Data Tests with PostGIS</h3>
-          <p>A geospatial API checked against its own database. Each answer is compared with an independent SQL query, and distances with maths that does not use PostGIS.</p>
-          <ul class="project-points">
-            <li>Boundary cases built into the seed data</li>
-            <li>Rejected writes verified in the database</li>
-            <li>Whole stack starts with Docker Compose</li>
-          </ul>
-          <ul class="tags" aria-label="Technologies">
-            <li>pytest</li><li>PostgreSQL</li><li>PostGIS</li><li>FastAPI</li><li>Docker</li>
-          </ul>
-          <p class="project-links">
-            <a href="https://github.com/joselohu/pytest-postgis-data-tests">Repository<span class="arrow" aria-hidden="true">&#8599;</span></a>
-          </p>
-        </article>
-
-        <article class="project reveal">
-          <p class="project-kind">Exploratory testing</p>
-          <h3>QA Case Study</h3>
-          <p>A checkout flow taken from test plan to release recommendation: exploratory charters, session notes, and bug reports with evidence.</p>
-          <ul class="project-points">
-            <li>Risk based test plan with exit criteria</li>
-            <li>Nine bug reports with steps and screenshots</li>
-            <li>One page summary for a product owner</li>
-          </ul>
-          <ul class="tags" aria-label="Technologies">
-            <li>Test planning</li><li>Bug reporting</li><li>Risk analysis</li>
-          </ul>
-          <p class="project-links">
-            <a href="https://github.com/joselohu/qa-case-study-saucedemo">Repository<span class="arrow" aria-hidden="true">&#8599;</span></a>
-          </p>
-        </article>
-
-        <article class="project reveal">
-          <p class="project-kind">AI in testing</p>
-          <h3>AI-Assisted Testing Toolkit</h3>
-          <p>Claude skills for test charters, bug reports and Playwright test review, with the rules I apply before any AI output reaches a report or a repository.</p>
-          <ul class="project-points">
-            <li>Nothing is reported that was not observed</li>
-            <li>Review checklist for flaky and weak tests</li>
-            <li>Browser automation through the Playwright MCP server</li>
-          </ul>
-          <ul class="tags" aria-label="Technologies">
-            <li>Claude Code</li><li>MCP</li><li>Playwright</li>
-          </ul>
-          <p class="project-links">
-            <a href="https://github.com/joselohu/ai-assisted-testing-toolkit">Repository<span class="arrow" aria-hidden="true">&#8599;</span></a>
-          </p>
-        </article>
+      <div class="tech-strip">
+        <ul class="container" aria-label="Main tools">
+          <li>Playwright</li>
+          <li>TypeScript</li>
+          <li>Postman</li>
+          <li>pytest</li>
+          <li>PostgreSQL</li>
+          <li>Docker</li>
+          <li>GitHub Actions</li>
+        </ul>
       </div>
     </section>
 
-    <section class="section container" id="skills" aria-labelledby="skills-title">
-      <header class="section-header">
-        <p class="section-label">02</p>
-        <h2 id="skills-title">Skills</h2>
-      </header>
-
-      <div class="skills">
-        <div class="skill-group reveal">
-          <h3>Test automation</h3>
-          <ul>
-            <li>Playwright</li>
-            <li>TypeScript and JavaScript</li>
-            <li>Python and pytest</li>
-            <li>GitHub Actions</li>
-          </ul>
-        </div>
-        <div class="skill-group reveal">
-          <h3>API testing</h3>
-          <ul>
-            <li>Postman and Newman</li>
-            <li>REST and Swagger</li>
-            <li>JSON Schema validation</li>
-            <li>Authorization and negative testing</li>
-          </ul>
-        </div>
-        <div class="skill-group reveal">
-          <h3>Data</h3>
-          <ul>
-            <li>PostgreSQL and PostGIS</li>
-            <li>MySQL</li>
-            <li>SQL for test verification</li>
-            <li>Docker</li>
-          </ul>
-        </div>
-        <div class="skill-group reveal">
-          <h3>Practice</h3>
-          <ul>
-            <li>Exploratory and regression testing</li>
-            <li>Web, iOS and Android</li>
-            <li>Agile, Scrum and Jira</li>
-            <li>AI-assisted test engineering</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section container" id="experience" aria-labelledby="experience-title">
-      <header class="section-header">
-        <p class="section-label">03</p>
-        <h2 id="experience-title">Experience</h2>
-      </header>
-
-      <ol class="timeline">
-        <li class="timeline-item reveal">
-          <p class="timeline-date">May 2026 to present</p>
-          <div>
-            <h3>Quality Assurance Automation Engineer</h3>
-            <p class="timeline-org">AirSight, remote</p>
-            <p>End-to-end, regression and API testing across a legacy system and active feature development.</p>
-          </div>
-        </li>
-        <li class="timeline-item reveal">
-          <p class="timeline-date">Apr 2023 to May 2026</p>
-          <div>
-            <h3>Software Quality Assurance Analyst</h3>
-            <p class="timeline-org">Resident Interface, hybrid</p>
-            <p>Functional, regression and API testing in an Agile team, with Playwright, Postman and Jira.</p>
-          </div>
-        </li>
-        <li class="timeline-item reveal">
-          <p class="timeline-date">Nov 2021 to Mar 2023</p>
-          <div>
-            <h3>Case Analyst</h3>
-            <p class="timeline-org">24-7 Intouch, remote</p>
-          </div>
-        </li>
-        <li class="timeline-item reveal">
-          <p class="timeline-date">Jul 2018 to Dec 2020</p>
-          <div>
-            <h3>Customer Service Representative</h3>
-            <p class="timeline-org">Alorica</p>
-          </div>
-        </li>
-      </ol>
-
-      <div class="education reveal">
-        <p class="timeline-date">Education</p>
-        <div>
-          <h3>Bachelor's Degree in Information Systems Engineering and Computer Science</h3>
-          <p class="timeline-org">Universidad Mariano G&aacute;lvez, 2021 to 2025</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section container" id="certifications" aria-labelledby="certifications-title">
-      <header class="section-header">
-        <p class="section-label">04</p>
-        <h2 id="certifications-title">Certifications</h2>
-      </header>
-
-      <ul class="certs">
+    <section class="section container about" id="about" aria-labelledby="about-title">
+      <ul class="services">
         <li class="reveal">
-          <h3>ISTQB Certified Tester, Foundation Level Agile Tester</h3>
-          <p>ASTQB, February 2026</p>
+          <svg class="service-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="8" width="38" height="28" rx="3"/><path d="M5 16h38M18 42h12M24 36v6M17 26l5 5 9-10"/></svg>
+          <span>Test Automation</span>
         </li>
         <li class="reveal">
-          <h3>ISTQB Certified Tester, Foundation Level</h3>
-          <p>ASTQB, February 2026</p>
+          <svg class="service-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M17 8c-5 0-6 3-6 7v4c0 3-2 5-5 5 3 0 5 2 5 5v4c0 4 1 7 6 7M31 8c5 0 6 3 6 7v4c0 3 2 5 5 5-3 0-5 2-5 5v4c0 4-1 7-6 7M20 24h.01M24 24h.01M28 24h.01"/></svg>
+          <span>API Testing</span>
         </li>
         <li class="reveal">
-          <h3>Postman API Fundamentals Student Expert</h3>
-          <p>Postman, September 2025</p>
+          <svg class="service-icon" viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="11" rx="15" ry="5"/><path d="M9 11v13c0 2.8 6.7 5 15 5s15-2.2 15-5V11M9 24v13c0 2.8 6.7 5 15 5s15-2.2 15-5V24"/></svg>
+          <span>Data Testing</span>
         </li>
         <li class="reveal">
-          <h3>Playwright: Web Automation Testing From Zero to Hero</h3>
-          <p>Udemy, September 2025</p>
+          <svg class="service-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="21" cy="21" r="13"/><path d="M31 31l11 11M21 15v6l4 3"/></svg>
+          <span>Exploratory Testing</span>
         </li>
       </ul>
+
+      <div class="about-text">
+        <h2 id="about-title">About me</h2>
+        <p>
+          I'm a QA Automation Engineer in Guatemala City with more than three years in quality
+          assurance, working across a legacy system and active feature development.
+        </p>
+        <p>
+          I specialise in end-to-end and regression testing with Playwright and TypeScript, API
+          testing with Postman, and checking the data behind the API with SQL. I also use AI to
+          widen test coverage, and review everything it produces before it reaches a report.
+        </p>
+
+        <dl class="stats">
+          <div>
+            <dt>3<span class="accent">+</span></dt>
+            <dd>Years in QA</dd>
+          </div>
+          <div>
+            <dt>4</dt>
+            <dd>Certifications</dd>
+          </div>
+          <div>
+            <dt>5</dt>
+            <dd>Open projects</dd>
+          </div>
+        </dl>
+      </div>
     </section>
 
-    <section class="section container contact" id="contact" aria-labelledby="contact-title">
-      <p class="section-label">05</p>
-      <h2 id="contact-title">Have something that needs testing?</h2>
-      <p class="lead">
-        I take on part-time and project work: building a Playwright suite, testing an API,
-        setting up CI for tests, or exploring a feature before release.
-      </p>
-      <div class="hero-actions">
-        <a class="button button-primary" href="https://www.linkedin.com/in/jose-david-lopez-huertas-95b742158">Message me on LinkedIn</a>
-        <a class="button" href="https://github.com/joselohu">GitHub</a>
+    <section class="section section-alt" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="projects-title">Projects</h2>
+          <p>Each one runs from a single command. The automated ones run in CI on every change.</p>
+        </header>
+
+        <div class="projects">
+          <article class="project reveal">
+            <p class="project-kind">End-to-end automation</p>
+            <h3>Playwright E2E Framework</h3>
+            <p>A regression suite for an online store on Chromium, Firefox, WebKit and a mobile viewport, with page objects, a saved login session and a published report.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Playwright</li><li>TypeScript</li><li>GitHub Actions</li>
+            </ul>
+            <p class="project-links">
+              <a href="https://github.com/joselohu/playwright-e2e-framework">Repository<span class="arrow" aria-hidden="true">&#8599;</span></a>
+              <a href="https://joselohu.github.io/playwright-e2e-framework/">Live report<span class="arrow" aria-hidden="true">&#8599;</span></a>
+            </p>
+          </article>
+
+          <article class="project reveal">
+            <p class="project-kind">API testing</p>
+            <h3>API Test Suite</h3>
+            <p>A booking API tested with Playwright and with a Postman collection run by Newman. Schema validation, authorization, and six documented API defects.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Playwright API</li><li>Postman</li><li>Newman</li>
+            </ul>
+            <p class="project-links">
+              <a href="https://github.com/joselohu/api-test-suite">Repository<span class="arrow" aria-hidden="true">&#8599;</span></a>
+            </p>
+          </article>
+
+          <article class="project reveal">
+            <p class="project-kind">Data and geospatial testing</p>
+            <h3>API and Data Tests with PostGIS</h3>
+            <p>A geospatial API checked against its own database: each answer is compared with an independent SQL query and with distance maths that does not use PostGIS.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>pytest</li><li>PostGIS</li><li>Docker</li>
+            </ul>
+            <p class="project-links">
+              <a href="https://github.com/joselohu/pytest-postgis-data-tests">Repository<span class="arrow" aria-hidden="true">&#8599;</span></a>
+            </p>
+          </article>
+
+          <article class="project reveal">
+            <p class="project-kind">Exploratory testing</p>
+            <h3>QA Case Study</h3>
+            <p>A checkout flow taken from test plan to release recommendation, with exploratory charters, session notes and nine bug reports with evidence.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Test planning</li><li>Bug reporting</li>
+            </ul>
+            <p class="project-links">
+              <a href="https://github.com/joselohu/qa-case-study-saucedemo">Repository<span class="arrow" aria-hidden="true">&#8599;</span></a>
+            </p>
+          </article>
+
+          <article class="project reveal">
+            <p class="project-kind">AI in testing</p>
+            <h3>AI-Assisted Testing Toolkit</h3>
+            <p>Claude skills for test charters, bug reports and Playwright test review, with the rules I apply before AI output reaches a report or a repository.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Claude Code</li><li>MCP</li>
+            </ul>
+            <p class="project-links">
+              <a href="https://github.com/joselohu/ai-assisted-testing-toolkit">Repository<span class="arrow" aria-hidden="true">&#8599;</span></a>
+            </p>
+          </article>
+
+          <a class="project project-more reveal" href="https://github.com/joselohu">
+            <span>More on GitHub</span>
+            <span class="arrow" aria-hidden="true">&#8599;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="resume" aria-labelledby="resume-title">
+      <header class="section-header">
+        <h2 id="resume-title">Resume</h2>
+      </header>
+
+      <div class="resume">
+        <div>
+          <h3 class="resume-heading">Experience</h3>
+          <ol class="timeline">
+            <li class="reveal">
+              <p class="timeline-date">May 2026 to present</p>
+              <h4>Quality Assurance Automation Engineer</h4>
+              <p class="timeline-org">AirSight, remote</p>
+              <p>End-to-end, regression and API testing across a legacy system and active feature development.</p>
+            </li>
+            <li class="reveal">
+              <p class="timeline-date">Apr 2023 to May 2026</p>
+              <h4>Software Quality Assurance Analyst</h4>
+              <p class="timeline-org">Resident Interface, hybrid</p>
+              <p>Functional, regression and API testing in an Agile team, with Playwright, Postman and Jira.</p>
+            </li>
+            <li class="reveal">
+              <p class="timeline-date">Nov 2021 to Mar 2023</p>
+              <h4>Case Analyst</h4>
+              <p class="timeline-org">24-7 Intouch, remote</p>
+            </li>
+            <li class="reveal">
+              <p class="timeline-date">Jul 2018 to Dec 2020</p>
+              <h4>Customer Service Representative</h4>
+              <p class="timeline-org">Alorica</p>
+            </li>
+          </ol>
+        </div>
+
+        <div>
+          <h3 class="resume-heading">Education and certifications</h3>
+          <ol class="timeline">
+            <li class="reveal">
+              <p class="timeline-date">Feb 2026</p>
+              <h4>ISTQB Certified Tester, Foundation Level Agile Tester</h4>
+              <p class="timeline-org">ASTQB</p>
+            </li>
+            <li class="reveal">
+              <p class="timeline-date">Feb 2026</p>
+              <h4>ISTQB Certified Tester, Foundation Level</h4>
+              <p class="timeline-org">ASTQB</p>
+            </li>
+            <li class="reveal">
+              <p class="timeline-date">2021 to 2025</p>
+              <h4>Bachelor's Degree in Information Systems Engineering and Computer Science</h4>
+              <p class="timeline-org">Universidad Mariano G&aacute;lvez</p>
+            </li>
+            <li class="reveal">
+              <p class="timeline-date">Sep 2025</p>
+              <h4>Postman API Fundamentals Student Expert</h4>
+              <p class="timeline-org">Postman</p>
+            </li>
+            <li class="reveal">
+              <p class="timeline-date">Sep 2025</p>
+              <h4>Playwright: Web Automation Testing From Zero to Hero</h4>
+              <p class="timeline-org">Udemy</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="skills reveal">
+        <h3 class="resume-heading">Skills</h3>
+        <ul class="tags tags-large">
+          <li>Playwright</li><li>TypeScript</li><li>JavaScript</li><li>Python</li><li>pytest</li>
+          <li>Postman</li><li>Newman</li><li>Swagger</li><li>REST APIs</li><li>JSON Schema</li>
+          <li>PostgreSQL</li><li>PostGIS</li><li>MySQL</li><li>Docker</li><li>GitHub Actions</li>
+          <li>Jira</li><li>Agile and Scrum</li><li>iOS and Android testing</li><li>AI-assisted testing</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-alt contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">Got a project<span class="accent">?</span></h2>
+        <p class="lead">
+          I take on part-time and project work: building a Playwright suite, testing an API,
+          setting up CI for tests, or exploring a feature before release.
+        </p>
+        <div class="actions">
+          <a class="button button-primary" href="https://www.linkedin.com/in/jose-david-lopez-huertas-95b742158">Message me on LinkedIn</a>
+          <a class="button" href="https://github.com/joselohu">GitHub</a>
+        </div>
       </div>
     </section>
   </main>
@@ -328,6 +320,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>&copy; <span id="year">2026</span> Jose David Lopez Huertas</p>
+      <p>Guatemala City, GMT-6</p>
       <p><a href="#top">Back to top</a></p>
     </div>
   </footer>

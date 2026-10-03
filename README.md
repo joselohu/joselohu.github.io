@@ -2,12 +2,13 @@
 
 My portfolio site: https://joselohu.github.io
 
-A single static page with no build step and no dependencies.
+A single static page with no build step. The only external resource is the Montserrat font from Google Fonts.
 
 ```
 index.html              Content and structure
 assets/css/styles.css   Design tokens, layout, light and dark themes
 assets/js/main.js       Theme toggle, mobile menu, reveal on scroll
+assets/img/jose.jpg     Portrait
 assets/favicon.svg
 ```
 
@@ -23,4 +24,4 @@ npx serve .
 
 - Text and projects live in `index.html`. Each project is one `<article class="project">`.
 - Colours, spacing and fonts are CSS variables at the top of `styles.css`. The dark theme overrides the same variables.
-- The site follows the visitor's system theme until they use the toggle; the choice is then remembered in the browser.
+- The site opens in the dark theme. The toggle switches to light and the choice is remembered in the browser.
