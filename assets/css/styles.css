@@ -728,6 +728,13 @@ a:hover .arrow {
   padding-block: 1.75rem;
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+}
+
 /* ---------- Reveal on scroll ---------- */
 
 .js .reveal {
